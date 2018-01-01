@@ -22,3 +22,9 @@ select,
 textarea {
     max-width: 280px;
 }
+
+/* Set navbar background color when on page to blue */
+.navcustom {
+    background-color: #0071bc;
+    border-color: black;
+}

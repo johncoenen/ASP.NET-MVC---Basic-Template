@@ -16,14 +16,14 @@ namespace BlogEngine.Controllers
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
-
+            ViewBag.selectedItem = "about";
             return View();
         }
 
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
-
+            ViewBag.selectedItem = "contact";
             return View();
         }
     }

@@ -8,7 +8,7 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar navbar-inverse navbar-fixed-top navcustom">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -20,10 +20,9 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active">@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Extra", "Index", "Extra")</li>
+                    <li class=@(@ViewBag.selectedItem == "about" ? "active" : "")>@Html.ActionLink("About", "About", "Home")</li>
+                    <li class=@(@ViewBag.selectedItem == "contact" ? "active" : "")>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li class=@(@ViewBag.selectedItem == "extra" ? "active" : "")>@Html.ActionLink("Extra", "Index", "Extra")</li>
                 </ul>
             </div>
         </div>
